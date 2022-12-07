@@ -1,0 +1,19 @@
+{
+  "adult": false,
+  "backdrop_path": "/path.jpg",
+  "genres": [
+    {
+      "id": 1,
+      "name": "Action"
+    }
+  ],
+  "id": 1,
+  "original_title": "Original Title",
+  "overview": "Overview",
+  "poster_path": "/path.jpg",
+  "release_date": "2020-05-05",
+  "runtime": 120,
+  "title": "Title",
+  "vote_average": 1.0,
+  "vote_count": 1
+}

@@ -1,0 +1,23 @@
+{
+  "_id": "1",
+  "air_date": "21-11-2022",
+  "episodes": [
+    {
+      "air_date": "21-11-2022",
+      "episode_number": 1,
+      "name": "Wakanda",
+      "overview": "Overview",
+      "id": 1,
+      "production_code": "productioncode",
+      "season_number": 1,
+      "still_path": "stillpath",
+      "vote_average": 1.0,
+      "vote_count": 1
+    }
+  ],
+  "name": "Auldy",
+  "overview": "Overview",
+  "id": 1,
+  "poster_path": "/path.jpg",
+  "season_number": 1
+}

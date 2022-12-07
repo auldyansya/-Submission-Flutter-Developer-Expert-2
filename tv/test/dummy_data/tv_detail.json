@@ -1,0 +1,30 @@
+{
+  "backdrop_path": "backdropPath",
+  "first_air_date": "12-11-2022",
+  "genres": [
+    {
+      "id": 1,
+      "name": "Adventure"
+    }
+  ],
+  "id": 1,
+  "original_name": "Auldy Ansya Rullah",
+  "name": "Auldy",
+  "overview": "overview",
+  "original_language": "Indonesia",
+  "popularity": 1.0,
+  "poster_path": "poster_path",
+  "seasons": [
+    {
+      "air_date": "12-11-2022",
+      "episode_count": 2,
+      "id": 1,
+      "name": "Adventure",
+      "overview": "overview",
+      "poster_path": "poster_path",
+      "season_number": 1
+    }
+  ],
+  "vote_average": 1.0,
+  "vote_count": 1
+}
