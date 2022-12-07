@@ -71,7 +71,7 @@ void main() {
 
   group("Save Watchlist Tv", () {
     blocTest<TvWatchlistBloc, TvWatchlistState>(
-      "Should emit [Loading, HasData] when data is gotten successfully",
+      "Should emit [Loading, Loaded] when data is gotten successfully",
       build: () {
         when(mockSaveWatchlistTv.execute(testTvDetail)).thenAnswer(
             (_) async => const Right(TvWatchlistBloc.messageAddedToWatchlist));
@@ -85,7 +85,7 @@ void main() {
       verify: (bloc) => verify(mockSaveWatchlistTv.execute(testTvDetail)),
     );
     blocTest<TvWatchlistBloc, TvWatchlistState>(
-      "Should emit [Loading, Error] when save movie is unsuccessful",
+      "Should emit [Loading, Error] when save tv is unsuccessful",
       build: () {
         when(mockSaveWatchlistTv.execute(testTvDetail))
             .thenAnswer((_) async => const Left(ServerFailure("Server Failure")));
@@ -102,7 +102,7 @@ void main() {
 
   group("Remove Watchlist Tv", () {
     blocTest<TvWatchlistBloc, TvWatchlistState>(
-      "Should emit [Loading, HasData] when data is gotten successfully",
+      "Should emit [Loading, Loaded] when data is gotten successfully",
       build: () {
         when(mockRemoveWatchlistTv.execute(testTvDetail)).thenAnswer(
             (_) async => const Right(TvWatchlistBloc.messageRemoveToWatchlist));
