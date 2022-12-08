@@ -4,6 +4,7 @@ import 'package:tv/data/datasources/tv_remote_data_source.dart';
 import 'package:tv/domain/repositories/tv_repository.dart';
 import 'package:mockito/annotations.dart';
 import 'package:http/http.dart' as http;
+import 'package:core/core.dart';
 
 @GenerateMocks([
   TvRepository,
@@ -11,6 +12,7 @@ import 'package:http/http.dart' as http;
   TvLocalDataSource,
   TvDatabaseHelper,
 ], customMocks: [
-  MockSpec<http.Client>(as: #MockHttpClient)
+  MockSpec<http.Client>(as: #MockHttpClient),
+  MockSpec<SSLPinningClient>(as: #MockSSLPinningClient)
 ])
 void main() {}

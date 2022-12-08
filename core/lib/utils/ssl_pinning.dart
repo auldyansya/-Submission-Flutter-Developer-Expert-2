@@ -12,7 +12,7 @@ class SSLPinningClient extends IOClient {
 
 class Shared {
   static Future<IOClient> initializeIOClient() async {
-    final ByteData sslCert = await rootBundle.load('assets/certificate.cer');
+    final ByteData sslCert = await rootBundle.load('certificates/certificates.pem');
     SecurityContext securityContext = SecurityContext(withTrustedRoots: false);
     securityContext.setTrustedCertificatesBytes(sslCert.buffer.asInt8List());
     HttpClient httpClient = HttpClient(context: securityContext);

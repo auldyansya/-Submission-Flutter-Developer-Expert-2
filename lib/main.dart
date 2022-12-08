@@ -3,13 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:ditonton/injection.dart' as di;
-
+import 'package:firebase_core/firebase_core.dart';
 import 'package:about/about.dart';
 import 'package:core/core.dart';
 import 'package:movies/movies.dart';
 import 'package:tv/tv.dart';
+import 'package:ditonton/firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   di.init();
   runApp(MyApp());
 }

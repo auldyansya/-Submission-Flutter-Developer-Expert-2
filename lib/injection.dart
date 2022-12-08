@@ -1,14 +1,14 @@
-import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
 
 import 'package:movies/movies.dart';
 import 'package:tv/tv.dart';
+import 'package:core/core.dart';
 
 
 final locator = GetIt.instance;
 
 void init() {
-  // provider
+  // provide
   locator.registerFactory(
     () => MoviesNowPlayingBloc(
       locator(),
@@ -146,5 +146,5 @@ void init() {
   locator.registerLazySingleton<TvDatabaseHelper>(() => TvDatabaseHelper());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton<SSLPinningClient>(() => SSLPinningClient());
 }

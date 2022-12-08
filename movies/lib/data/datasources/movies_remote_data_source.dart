@@ -4,7 +4,6 @@ import '../models/movie_detail_model.dart';
 import '../models/movie_model.dart';
 import '../models/movie_response.dart';
 
-import 'package:http/http.dart' as http;
 import 'package:core/core.dart';
 
 
@@ -26,7 +25,7 @@ class MoviesRemoteDataSourceImpl implements MoviesRemoteDataSource {
   static const apiKey = 'api_key=2174d146bb9c0eab47529b2e77d6b526';
   static const baseUrl = 'https://api.themoviedb.org/3';
 
-  final http.Client client;
+  final SSLPinningClient client;
 
   MoviesRemoteDataSourceImpl({required this.client});
 
