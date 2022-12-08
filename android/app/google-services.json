@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "110646298161",
+    "project_id": "aulansah-tv",
+    "storage_bucket": "aulansah-tv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:110646298161:android:a2a0dc54edf6da11af7710",
+        "android_client_info": {
+          "package_name": "com.aulansah.tv"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "110646298161-1be2tjn0vjjld2q4b8i8l7gituspk6qp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl6AglWKYNgljHPH5BvTU8oMP0kkzhwUg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "110646298161-1be2tjn0vjjld2q4b8i8l7gituspk6qp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "110646298161-0vakijjfnt0v33up16ipsiq1f5065h5l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dicoding.ditonton"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
