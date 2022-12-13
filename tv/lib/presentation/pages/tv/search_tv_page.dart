@@ -7,23 +7,10 @@ import '../../widgets/tv_card_list.dart';
 
 import 'package:core/core.dart';
 
-class SearchTvPage extends StatefulWidget {
+class SearchTvPage extends StatelessWidget {
   static const routeName = '/search-tv';
 
   const SearchTvPage({Key? key}) : super(key: key);
-
-  @override
-  State<SearchTvPage> createState() => _SearchTvPageState();
-}
-
-class _SearchTvPageState extends State<SearchTvPage> {
-
-  @override
-  void deactivate() {
-    super.deactivate();
-    Future.microtask(() =>
-    context.read<TvSearchBloc>().add(ResetTvSearch()));
-  }
 
   @override
   Widget build(BuildContext context) {

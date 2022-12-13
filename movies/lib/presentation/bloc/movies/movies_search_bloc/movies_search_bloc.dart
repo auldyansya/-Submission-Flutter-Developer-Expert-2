@@ -32,11 +32,5 @@ class MoviesSearchBloc extends Bloc<MoviesSearchEvent, MoviesSearchState> {
         },
       );
     }, transformer: debounceMovies(const Duration(milliseconds: 500)));
-
-    on<ResetMoviesSearch>(
-      (event, emit) async {
-        emit(MoviesSearchEmpty());
-      },
-    );
   }
 }

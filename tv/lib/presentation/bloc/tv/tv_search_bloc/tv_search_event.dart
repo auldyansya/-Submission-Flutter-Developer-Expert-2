@@ -19,5 +19,3 @@ class OnQueryTvChanged extends TvSearchEvent {
 EventTransformer<T> debounceTv<T>(Duration duration) {
   return (events, mapper) => events.debounceTime(duration).flatMap(mapper);
 }
-
-class ResetTvSearch extends TvSearchEvent {}

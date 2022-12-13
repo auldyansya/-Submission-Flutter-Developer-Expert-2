@@ -20,4 +20,3 @@ EventTransformer<T> debounceMovies<T>(Duration duration) {
   return (events, mapper) => events.debounceTime(duration).flatMap(mapper);
 }
 
-class ResetMoviesSearch extends MoviesSearchEvent {}

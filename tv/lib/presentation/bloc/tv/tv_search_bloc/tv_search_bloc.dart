@@ -32,11 +32,5 @@ class TvSearchBloc extends Bloc<TvSearchEvent, TvSearchState> {
         },
       );
     }, transformer: debounceTv(const Duration(milliseconds: 500)));
-
-    on<ResetTvSearch>(
-      (event, emit) async {
-        emit(TvSearchEmpty());
-      },
-    );
   }
 }

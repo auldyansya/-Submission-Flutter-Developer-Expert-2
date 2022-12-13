@@ -29,7 +29,6 @@ void main() {
     );
   });
 
-
   const tMovieModel = MovieModel(
     adult: false,
     backdropPath: '/muth4OYamXf41G2evdrLEg8d3om.jpg',
@@ -66,7 +65,6 @@ void main() {
 
   final tMovieModelList = <MovieModel>[tMovieModel];
   final tMovieList = <Movie>[tMovie];
-
 
   group('Now Playing Movies', () {
     test(
@@ -106,8 +104,10 @@ void main() {
       final result = await repository.getNowPlayingMovies();
       // assert
       verify(mockRemoteDataSource.getNowPlayingMovies());
-      expect(result,
-          equals(const Left(ConnectionFailure('Failed to connect to the network'))));
+      expect(
+          result,
+          equals(const Left(
+              ConnectionFailure('Failed to connect to the network'))));
     });
   });
 
@@ -145,11 +145,10 @@ void main() {
       // act
       final result = await repository.getPopularMovies();
       // assert
-      expect(
-          result, const Left(ConnectionFailure('Failed to connect to the network')));
+      expect(result,
+          const Left(ConnectionFailure('Failed to connect to the network')));
     });
   });
-
 
   group('Top Rated Movies', () {
     test('should return movie list when call to data source is successful',
@@ -184,11 +183,10 @@ void main() {
       // act
       final result = await repository.getTopRatedMovies();
       // assert
-      expect(
-          result, const Left(ConnectionFailure('Failed to connect to the network')));
+      expect(result,
+          const Left(ConnectionFailure('Failed to connect to the network')));
     });
   });
-
 
   group('Get Movie Detail', () {
     const tId = 1;
@@ -243,11 +241,12 @@ void main() {
       final result = await repository.getMovieDetail(tId);
       // assert
       verify(mockRemoteDataSource.getMovieDetail(tId));
-      expect(result,
-          equals(const Left(ConnectionFailure('Failed to connect to the network'))));
+      expect(
+          result,
+          equals(const Left(
+              ConnectionFailure('Failed to connect to the network'))));
     });
   });
-
 
   group('Get Movie Recommendations', () {
     final tMovieList = <MovieModel>[];
@@ -262,7 +261,7 @@ void main() {
       final result = await repository.getMovieRecommendations(tId);
       // assert
       verify(mockRemoteDataSource.getMovieRecommendations(tId));
-     final resultList = result.getOrElse(() => []);
+      final resultList = result.getOrElse(() => []);
       expect(resultList, equals(tMovieList));
     });
 
@@ -289,12 +288,12 @@ void main() {
       final result = await repository.getMovieRecommendations(tId);
       // assert
       verify(mockRemoteDataSource.getMovieRecommendations(tId));
-      expect(result,
-          equals(const Left(ConnectionFailure('Failed to connect to the network'))));
+      expect(
+          result,
+          equals(const Left(
+              ConnectionFailure('Failed to connect to the network'))));
     });
   });
-
-
 
   group('Search Movies', () {
     const tQuery = 'spiderman';
@@ -307,7 +306,7 @@ void main() {
       // act
       final result = await repository.searchMovies(tQuery);
       // assert
-     final resultList = result.getOrElse(() => []);
+      final resultList = result.getOrElse(() => []);
       expect(resultList, tMovieList);
     });
 
@@ -331,11 +330,10 @@ void main() {
       // act
       final result = await repository.searchMovies(tQuery);
       // assert
-      expect(
-          result, const Left(ConnectionFailure('Failed to connect to the network')));
+      expect(result,
+          const Left(ConnectionFailure('Failed to connect to the network')));
     });
   });
-
 
   group('Save Watchlist Movies', () {
     test('should return success message when saving successful', () async {
@@ -359,7 +357,6 @@ void main() {
     });
   });
 
-
   group('Remove Watchlist Movies', () {
     test('should return success message when remove successful', () async {
       // arrange
@@ -381,7 +378,6 @@ void main() {
       expect(result, const Left(DatabaseFailure('Failed to remove watchlist')));
     });
   });
-
 
   group('Get Watchlist Movies', () {
     test('should return list of Movies', () async {

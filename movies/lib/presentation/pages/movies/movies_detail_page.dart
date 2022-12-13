@@ -226,7 +226,7 @@ class DetailContentMovies extends StatelessWidget {
                                           onTap: () {
                                             Navigator.pushReplacementNamed(
                                               context,
-                                              MoviesDetailPage.routeName,
+                                              movieDetailRoute,
                                               arguments: movie.id,
                                             );
                                           },

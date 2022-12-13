@@ -244,7 +244,7 @@ class DetailContentDetailTv extends StatelessWidget {
                                       child: ListView.builder(
                                         scrollDirection: Axis.horizontal,
                                         itemBuilder: (context, index) {
-                                          final movie = state.result[index];
+                                          final tv = state.result[index];
                                           return Padding(
                                             padding: const EdgeInsets.all(4.0),
                                             child: InkWell(
@@ -261,7 +261,7 @@ class DetailContentDetailTv extends StatelessWidget {
                                                 ),
                                                 child: CachedNetworkImage(
                                                   imageUrl:
-                                                  'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+                                                  'https://image.tmdb.org/t/p/w500${tv.posterPath}',
                                                   placeholder: (context, url) =>
                                                       const Center(
                                                         child: SizedBox(

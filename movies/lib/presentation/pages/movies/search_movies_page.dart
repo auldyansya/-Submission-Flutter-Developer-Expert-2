@@ -9,23 +9,10 @@ import '../../widgets/movie_card_list.dart';
 
 import 'package:core/core.dart';
 
-class SearchMoviesPage extends StatefulWidget {
+class SearchMoviesPage extends StatelessWidget {
   static const routeName = '/search-movies';
 
   const SearchMoviesPage({Key? key}) : super(key: key);
-
-  @override
-  State<SearchMoviesPage> createState() => _SearchMoviesPageState();
-}
-
-class _SearchMoviesPageState extends State<SearchMoviesPage> {
-
-  @override
-  void deactivate() {
-    super.deactivate();
-    Future.microtask(() =>
-    context.read<MoviesSearchBloc>().add(ResetMoviesSearch()));
-  }
 
   @override
   Widget build(BuildContext context) {
